@@ -1,0 +1,71 @@
+<div class="container">
+
+    <div class="ifContain" *ngIf="product">
+        <h1 class="detHeading">Product Details</h1>
+        <div class="flexBx">
+            <div class="left">
+                <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=900&ixid=MnwxfDB8MXxyYW5kb218MHx8Zm9vZHx8fHx8fDE2NTYyNjkxNDE&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1600" alt="product Image">
+            </div>
+            <div class="right">
+              <h2 class="prodName">{{product.name}}</h2>
+              
+              <span class="rating" *ngIf="product.rating <= 1">
+                  <i class="fa-solid fa-star"></i>
+                </span>
+                <span class="rating" *ngIf="product.rating === 2">
+                    <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                </span>
+                <span class="rating" *ngIf="product.rating === 3">
+                    <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                </span>
+                <span class="rating" *ngIf="product.rating === 4">
+                    <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                </span>
+                <span class="rating" *ngIf="product.rating >= 5">
+                    <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                </span>
+                <p class="prodSize">Available: {{product.quantity}}</p>
+                <h3 class="prodPrice">{{product.price}}</h3>
+                <p class="prodDesc">{{product.description}}</p>
+
+                
+              <button class="detailsBtn" routerLink="/order-success">ORDER NOW</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="ifContain" *ngIf="menu">
+        <h1 class="detHeading">Dish Details</h1>
+        <div class="flexBx">
+            <div class="left">
+                <img [src]="menu.imageURL" alt="menu Image">
+            </div>
+
+            <div class="right">
+                <h2 class="prodName">{{menu.name}}</h2>
+                
+                <span class="rating" *ngIf="menu.rating <= 1">
+                    <i class="fa-solid fa-star"></i>
+                </span>
+                <span class="rating" *ngIf="menu.rating === 2">
+                    <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                </span>
+                <span class="rating" *ngIf="menu.rating === 3">
+                    <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                </span>
+                <span class="rating" *ngIf="menu.rating === 4">
+                    <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                </span>
+                <span class="rating" *ngIf="menu.rating >= 5">
+                    <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                </span><br>
+                
+                <p class="prodSize">{{menu.size}} grams</p>
+                <h3 class="prodPrice">{{menu.price}}</h3>
+                <p class="prodDesc">{{menu.description}}</p>
+                
+              <button class="detailsBtn" routerLink="/order-success">ORDER NOW</button>
+            </div>
+        </div>
+    </div>
+</div>

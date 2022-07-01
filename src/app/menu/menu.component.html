@@ -1,0 +1,44 @@
+
+<div class="bannerImg">
+    <div class="txtBx">
+        <h1>Amber Consumeries</h1>
+    </div>
+</div>
+
+<h1>Menu Dishes</h1>
+<div class="cardsContain">
+    <mat-card class="productCard" *ngFor="let menu of menus">
+        <a [routerLink]="['/menu/details', menu.id]">
+            <div class="imgBx">
+                <img [src]= [menu.imageURL] alt="menu image">
+            </div>
+        </a>
+            
+        <div class="txtBx">
+            <h2>{{menu.name}}</h2>
+
+            <span class="rating" *ngIf="menu.rating <= 1">
+                Rating: <i class="fa-solid fa-star"></i>
+            </span>
+            <span class="rating" *ngIf="menu.rating === 2">
+                Rating: <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+            </span>
+            <span class="rating" *ngIf="menu.rating === 3">
+                Rating: <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+            </span>
+            <span class="rating" *ngIf="menu.rating === 4">
+                Rating: <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+            </span>
+            <span class="rating" *ngIf="menu.rating >= 5">
+                Rating: <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+            </span>
+            
+            <h3 class="price">Price: <b>{{menu.price}}</b></h3>
+
+            <button [routerLink]="['/menu/details', menu.id]" mat-button>View details</button> 
+            
+        </div>
+    </mat-card>
+</div>
+    
+

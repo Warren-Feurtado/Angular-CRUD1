@@ -1,0 +1,97 @@
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .ifContain{
+    width: 100%;
+}
+
+.ifContain .detHeading{
+    text-align: center;
+    font-size: 3vw;
+}
+
+.container .flexBx{
+    width: 100vw;
+    margin-top: 2vw;
+    display: flex;
+    justify-content: center;
+}
+
+.flexBx .left, .flexBx .right{
+    width: 40%;
+    padding-right: 2vw;
+    /* border: 1px solid red; */
+}
+
+.flexBx .left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left img{
+    width: 80%;
+    float: right;
+    box-shadow: 0px 2px 7px 3px rgba(32, 31, 31, 0.21);
+}
+
+.right{
+    /* padding-top: 2vw; */
+}
+
+.right .prodName{
+    font-size: 2vw;
+    margin-bottom: 0.5vw;
+}
+
+.right .prodSize{
+    margin-top: 0.4vw;
+}
+
+.rating i{
+    font-size: 0.9vw;
+    color: rgb(245, 164, 13);
+    text-shadow:  0px 1px 1px rgb(42, 42, 42);
+    margin-right: 0.1vw;
+}
+
+
+
+.prodDesc{
+    width: 60%;
+    color: rgb(100, 100, 100); 
+    font-size: 1vw;
+    margin-bottom: 1vw;
+}
+
+.prodPrice{
+    color: rgb(11, 11, 119);
+    font-size: 1.8vw;
+    font-weight: 700;
+    margin: 1vw 0 1vw 0;
+}
+
+.detailsBtn{
+    font-size: 1.1vw;
+    font-weight: 600;
+    padding: 1.1vw 6vw;
+    background: rgb(45, 45, 175);
+    color: white;
+    border-radius: 5px;
+    transition: 0.2s ease-in-out;
+    border: none;
+    margin: 1vw 0 1vw 0;
+    cursor: pointer;
+}
+
+.detailsBtn:hover{
+    background: rgb(11, 11, 119);
+}
+
+
